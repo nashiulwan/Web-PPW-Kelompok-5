@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+/* Variabel untuk preset */
+:root {
+    --color-1: #016A70;
+    --color-light: #FFFFDD;
+    --color-dark: #053B50;
+    --color-3: #D2DE32;
+    --color-4: #A2C579;
+    --color-white: white;
+    --color-black: black;
+    --size-small: 16px;
+    --size-medium: 24px;
+    --size-large: 36px;
+
+    --pd-default: 16px;
+    --transition: all 400ms ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.section-padding {
+    padding-top: 180px;
+    padding-bottom: 180px;
+    overflow: hidden;
+}
+
+/* Setting Jarak Navbar */
+@media (min-width: 560px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: var(--pd-default);
+        padding-left: var(--pd-default);
+    }
+}
+
+/* Style Navbar */
+.navbar {
+    padding-top: var(--pd-default);
+    padding-bottom: var(--pd-default);
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    font-weight: 700;
+    color: var(--color-1);
+}
+
+.navbar-brand {
+    font-size: var(--size-medium);
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.navbar-brand:hover {
+    color: var(--color-1);
+}
+
+.social-icon {
+    width: var(--size-large);
+    height: var(--size-large);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+}
+
+/* Scrolled navbar */
+.navbar.scrolled {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--color-light);
+    transition: var(--transition);
+    box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled .navbar-brand {
+    color: var(--color-1);
+}
+
+
+/* Style Home Container */
+.t-brand {
+    color: #016A70;
+    font-weight: 700;
+}
+
+.t-kuning {
+    color: var(--color-3);
+}
+
+.btn,
+.btn:focus {
+    padding: var(--pd-default);
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: 0;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    background: transparent;
+    border: 1px solid var(--color-dark)
+}
+
+#home {
+    background-image: url(../images/bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Style untuk services */
+#service {
+    background-image: url(../images/wp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-title {
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.section-title h1 {
+    padding-top: var(--pd-default);
+    padding-bottom: var(--pd-default);
+    font-weight: bold;
+}
+
+.service-icon {
+    width: 100%;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.service {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.service h5 {
+    font-weight: 700;
+    color: var(--color-light);
+}
+
+.service:hover {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-3);
+    color: var(--color-black);
+}
+
+.service:hover h5 {
+    color: var(--color-dark);
+}
+
+/* Style untuk FAQ */
+#faq {
+}
+.faq-container {
+    max-width: 60%;
+}
+.question {
+    padding: 1rem 2rem;
+    width: 100%;
+}
+.answer {
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 1rem;
+    display: none;
+}
+.faq.active .answer {
+    display: block;
+}
+
+
+/* Style Testimoni */
+#testimoni {
+    background-image: url(../images/bg3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.testimoni {
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-dark);
+}
+
+.testimoni .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-dark);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#testi-title {
+    color: white;
+}
+.testimoni img,
+.testimoni .content {
+    transition: var(--transition);
+}
+
+.testimoni:hover .content {
+    top: 0;
+}
+
+.testimoni:hover img {
+    transform: translateY(-100%);
+}
+
+/* Style sosmed */
+#contact {
+    background-image: url(../images/bg1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-media img {
+    width: 100%;
+}
+
+/* Style Footer*/
+footer {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #032431;
+    bottom: 0;
+    position: absolute;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+footer h4 {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+footer li {
+    list-style-type: none;
+}
